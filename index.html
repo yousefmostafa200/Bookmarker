@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMarks</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h2 class="heading"><span class="highlight">Bookmarker</span></h2>
+        <h3 class="desc">Bookmark your favorite sites</h3>
+      </header>
+
+      <section class="inputs">
+        <label for="name">
+          <span><i class="fa-solid fa-book-bookmark"></i></span>
+          Site Name
+        </label>
+        <input type="text" id="name" placeholder="Bookmark Name" />
+
+        <label for="url">
+          <span><i class="fa-solid fa-link"></i></span>
+          Site URL
+        </label>
+        <input type="text" id="url" placeholder="Site URL" />
+        <div class="button-box">
+          <button class="btn" id="submit">Create</button>
+        </div>
+      </section>
+
+      <section class="outputs">
+        <div id="deleteAllContainer"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal hidden">
+      <button class="btn-close-modal">&times;</button>
+      <h2 class="modal-header">
+        Site Name or Url is not valid, Please
+        <span class="highlight">follow</span> the rules below :
+      </h2>
+
+      <p class="rule">
+        <span><i class="fa-regular fa-circle-right"></i></span> Site name must
+        contain at least 3 characters
+      </p>
+      <p class="rule">
+        <span><i class="fa-regular fa-circle-right"></i></span>
+        Site URL must be a valid one
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
